@@ -1,0 +1,33 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/image/favicon.ico" alt="TEST" style="max-height: 60px" class="py-2 px-2">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="/" class="navbar-item">
+        Home
+      </a>
+      <a href="/documentation" class="navbar-item">
+        Documentation
+      </a>
+    </div>
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <% if (locals.logoutUrl) { %>
+        <a class="button is-primary" href=<%= logoutUrl %> >Logout</a>
+        <%} else { %>
+        <!-- <a class="button is-primary" href="/.ory/self-service/login/browser">Login</a> -->
+        <% } %>
+      </div>
+    </div>
+  </nav>
